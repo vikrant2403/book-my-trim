@@ -1,5 +1,5 @@
-import { prisma } from "../../../lib/prisma";
 export const dynamic = "force-dynamic";
+import { prisma } from "../../../lib/prisma";
 
 export default async function ServicesPage() {
   const services = await prisma.service.findMany();

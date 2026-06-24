@@ -1,5 +1,6 @@
-import { prisma } from "../../../lib/prisma";
 export const dynamic = "force-dynamic";
+import { prisma } from "../../../lib/prisma";
+
 
 export default async function ReportsPage() {
   const completedQueues = await prisma.queue.findMany({

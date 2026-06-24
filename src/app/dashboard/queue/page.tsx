@@ -1,9 +1,10 @@
+export const dynamic = "force-dynamic";
 import { deleteQueue } from "./delete";
 import { resetQueue } from "./reset";
 import { updateQueueStatus } from "./status";
 import Link from "next/link";
 import { prisma } from "../../../lib/prisma";
-export const dynamic = "force-dynamic";
+
 
 export default async function QueuePage() {
   const queue = await prisma.queue.findMany({
